@@ -1,7 +1,7 @@
 # Email Service
 This microservice is intended to be used with a gmail account. 
 
-To send an email, send a POST request to http://127.0.0.1:5000/email  
+To send an email, send a POST request to http://127.0.0.1:8000/email  
 The POST request should contain the subject, recipient_address, and message in the body of the request.
 
 ### Follow these steps before running the microservice:
@@ -24,19 +24,19 @@ The POST request should contain the subject, recipient_address, and message in t
 3. Install dependencies:
     - pip install -r requirements.txt
 4. Enter “python main.py” to run
-5. Program will run at http://127.0.0.1:5000
+5. Program will run at http://127.0.0.1:8000
 
 ## Communication Contract
 ### To send a request:
 
-1. Check that the microservice is running at http://127.0.0.1:5000
+1. Check that the microservice is running at http://127.0.0.1:8000
 
 2. Create a JSON object or dictionary containing 3 strings:
     - “subject”: The subject of the email. 
     - “recipient_address”: The recipient that will receive the email.    
     - “message”: The text that will be sent in the body of the email.
 
-3. Send a POST request to  http://127.0.0.1:5000/email with the JSON object in the body of the request  
+3. Send a POST request to  http://127.0.0.1:8000/email with the JSON object in the body of the request  
 
 Example request (using python requests library):
 
@@ -46,7 +46,7 @@ email = {
   "recipient_address": "email@gmail.com",  
   "message": "Test email"  
 }  
-response = requests.post("http://127.0.0.1:5000/email", json=email)
+response = requests.post("http://127.0.0.1:8000/email", json=email)
 ```
 
 ### Data received:
